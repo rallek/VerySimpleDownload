@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Simpledownload\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-27 18:15+0000\n"
-"PO-Revision-Date: 2013-11-27 19:39+0100\n"
+"PO-Revision-Date: 2014-01-03 22:55+0100\n"
 "Last-Translator: Ralf Köster <ralf@familie-koester.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -297,7 +297,7 @@ msgstr "Kein Element ausgewählt."
 #: lib/Simpledownload/ContentType/Base/ItemList.php:118
 #: lib/Simpledownload/Block/Base/ItemList.php:50
 msgid "Simpledownload list view"
-msgstr ""
+msgstr "Simpledownload Listenansicht"
 
 #: lib/Simpledownload/ContentType/Base/ItemList.php:130
 #: lib/Simpledownload/Block/Base/ItemList.php:51

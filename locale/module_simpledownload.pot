@@ -1,0 +1,1104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Zikula 1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-27 18:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: workflows/function.none_permissioncheck.php:55
+msgid "None workflow (no approval)"
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:56
+msgid ""
+"This is like a non-existing workflow. Everything is online immediately after "
+"creation."
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:60
+#: lib/Simpledownload/Util/Base/Workflow.php:28
+msgid "Initial"
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:60
+msgid "Pseudo-state for content which is just created and not persisted yet."
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:61
+#: lib/Simpledownload/Util/Base/ListEntries.php:158
+#: lib/Simpledownload/Util/Base/Workflow.php:31
+msgid "Approved"
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:61
+#: lib/Simpledownload/Util/Base/ListEntries.php:159
+msgid "Content has been approved and is available online."
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:62
+#: lib/Simpledownload/Util/Base/Workflow.php:34
+msgid "Deleted"
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:62
+msgid "Pseudo-state for content which has been deleted from the database."
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:68
+#: templates/admin/download/view.tpl:122
+msgid "Submit"
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:68
+msgid "Submit content."
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:72
+msgid "Update"
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:72
+msgid "Update content."
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:73
+#: templates/admin/download/view.tpl:120
+msgid "Delete"
+msgstr ""
+
+#: workflows/function.none_permissioncheck.php:73
+#: templates/admin/download/view.tpl:120
+msgid "Delete content permanently."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadObjectTypeSelector.php:30
+#: lib/Simpledownload/NewsletterPlugin/ItemList.php:69
+#: lib/Simpledownload/Api/Base/User.php:42
+#: lib/Simpledownload/Api/Base/Admin.php:42 templates/search/options.tpl:5
+#: templates/block/itemlist_modify.tpl:5
+msgid "Downloads"
+msgstr ""
+
+#: templates/plugins/function.simpledownloadTemplateSelector.php:30
+#: templates/block/itemlist_modify.tpl:52
+msgid "Only item titles"
+msgstr ""
+
+#: templates/plugins/function.simpledownloadTemplateSelector.php:31
+#: templates/block/itemlist_modify.tpl:53
+msgid "With description"
+msgstr ""
+
+#: templates/plugins/function.simpledownloadTemplateSelector.php:32
+#: templates/contenttype/itemlist_edit.tpl:68
+#: templates/block/itemlist_modify.tpl:54
+#: templates/block/itemlist_modify.tpl:59
+msgid "Custom template"
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:36
+msgid "This is a required field."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:37
+msgid "Please enter a valid number in this field."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:38
+msgid ""
+"Please use numbers only in this field. please avoid spaces or other "
+"characters such as dots or commas."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:39
+msgid "Please use letters only (a-z) in this field."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:40
+msgid ""
+"Please use only letters (a-z) or numbers (0-9) only in this field. No spaces "
+"or other characters are allowed."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:41
+msgid "Please enter a valid date."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:42
+msgid "Please enter a valid email address. For example yourname@example.com ."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:43
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:44
+msgid ""
+"Please use this date format: dd/mm/yyyy. For example 17/03/2010 for the 17th "
+"of March, 2010."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:45
+msgid "Please enter a valid $ amount. For example $100.00 ."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:46
+msgid "Please make a selection."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:47
+msgid "Please select one of the above options."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:50
+msgid "This value must not contain spaces."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:51
+msgid "Please select an allowed file type."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:52
+#: templates/plugins/function.simpledownloadValidationError.php:54
+#: templates/plugins/function.simpledownloadValidationError.php:56
+msgid "Please select a value in the past."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:53
+#: templates/plugins/function.simpledownloadValidationError.php:55
+#: templates/plugins/function.simpledownloadValidationError.php:57
+msgid "Please select a value in the future."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadValidationError.php:58
+msgid "This value is already assigned, but must be unique. Please change it."
+msgstr ""
+
+#: templates/plugins/function.simpledownloadTemplateHeaders.php:31
+#, php-format
+msgid "%1$s: missing parameter '%2$s'"
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:228
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:310
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:342
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:228
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:310
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:342
+#: lib/Simpledownload/Controller/Base/User.php:237
+#: lib/Simpledownload/Controller/Base/Admin.php:223
+#: lib/Simpledownload/Controller/Base/External.php:92
+msgid "No such item."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:258
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:258
+msgid "Error! Could not determine workflow actions."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:526
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:526
+msgid "Done! Item created."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:528
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:528
+msgid "Error! Creation attempt failed."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:533
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:533
+#: lib/Simpledownload/Controller/Base/Admin.php:381
+msgid "Done! Item updated."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:535
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:535
+msgid "Error! Update attempt failed."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:540
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:540
+#: lib/Simpledownload/Controller/Base/Admin.php:379
+msgid "Done! Item deleted."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Base/Edit.php:542
+#: lib/Simpledownload/Form/Handler/User/Base/Edit.php:542
+msgid "Error! Deletion attempt failed."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Download/Base/Edit.php:60
+#: lib/Simpledownload/Form/Handler/User/Download/Base/Edit.php:60
+msgid ""
+"Sorry, but you can not create the download yet as other items are required "
+"which must be created before!"
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Download/Base/Edit.php:167
+#: lib/Simpledownload/Form/Handler/User/Download/Base/Edit.php:167
+msgid "Done! Download created."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Download/Base/Edit.php:169
+#: lib/Simpledownload/Form/Handler/Admin/Download/Base/Edit.php:176
+#: lib/Simpledownload/Form/Handler/User/Download/Base/Edit.php:169
+#: lib/Simpledownload/Form/Handler/User/Download/Base/Edit.php:176
+msgid "Done! Download updated."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Download/Base/Edit.php:173
+#: lib/Simpledownload/Form/Handler/User/Download/Base/Edit.php:173
+msgid "Done! Download deleted."
+msgstr ""
+
+#: lib/Simpledownload/Form/Handler/Admin/Download/Base/Edit.php:202
+#: lib/Simpledownload/Form/Handler/User/Download/Base/Edit.php:202
+#: lib/Simpledownload/Controller/Base/Admin.php:371
+#, php-format
+msgid ""
+"Sorry, but an unknown error occured during the %s action. Please apply the "
+"changes again!"
+msgstr ""
+
+#: lib/Simpledownload/ContentType/Base/Item.php:52
+msgid "Simpledownload detail view"
+msgstr ""
+
+#: lib/Simpledownload/ContentType/Base/Item.php:64
+msgid "Display or link a single Simpledownload object."
+msgstr ""
+
+#: lib/Simpledownload/ContentType/Base/Item.php:119
+msgid "No item selected."
+msgstr ""
+
+#: lib/Simpledownload/ContentType/Base/ItemList.php:118
+#: lib/Simpledownload/Block/Base/ItemList.php:50
+msgid "Simpledownload list view"
+msgstr ""
+
+#: lib/Simpledownload/ContentType/Base/ItemList.php:130
+#: lib/Simpledownload/Block/Base/ItemList.php:51
+msgid "Display list of Simpledownload objects."
+msgstr ""
+
+#: lib/Simpledownload/ContentType/Base/ItemList.php:409
+#: templates/external/download/find.tpl:36
+#: templates/external/download/select.tpl:15
+#: templates/admin/download/view_quickNav.tpl:13
+#: templates/admin/download/view_quickNav.tpl:17
+#: templates/user/download/view_quickNav.tpl:13
+#: templates/user/download/view_quickNav.tpl:17
+#: templates/block/itemlist_modify.tpl:11
+msgid "All"
+msgstr ""
+
+#: lib/Simpledownload/Base/Installer.php:38
+#: lib/Simpledownload/Base/Installer.php:130
+msgid "Doctrine Exception: "
+msgstr ""
+
+#: lib/Simpledownload/Base/Installer.php:40
+#, php-format
+msgid ""
+"An error was encountered while creating the tables for the %s extension."
+msgstr ""
+
+#: lib/Simpledownload/Base/Installer.php:42
+msgid ""
+"Please enable the development mode by editing the /config/config.php file in "
+"order to reveal the error details."
+msgstr ""
+
+#: lib/Simpledownload/Base/Installer.php:62
+#, php-format
+msgid "Error! Could not create a category registry for the %s entity."
+msgstr ""
+
+#: lib/Simpledownload/Base/Installer.php:123
+#, php-format
+msgid ""
+"An error was encountered while removing stored object workflows for the %s "
+"extension."
+msgstr ""
+
+#: lib/Simpledownload/Base/Installer.php:132
+#, php-format
+msgid "An error was encountered while dropping tables for the %s extension."
+msgstr ""
+
+#: lib/Simpledownload/Base/Installer.php:153
+#, php-format
+msgid "The upload directories at [%s] can be removed manually."
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:97
+msgid "Error! Could not move your file to the destination folder."
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:125
+msgid "Error! No file found."
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:137
+msgid ""
+"Error! This file type is not allowed. Please choose another file format."
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:147
+#, php-format
+msgid "Error! Your file is too big. Please keep it smaller than %s kilobytes."
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:151
+#, php-format
+msgid "Error! Your file is too big. Please keep it smaller than %s megabytes."
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:160
+msgid "Error! This file type seems not to be a valid image."
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:321
+#: lib/Simpledownload/Base/UploadHandler.php:339
+msgid "Unknown error"
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:324
+#: lib/Simpledownload/Base/UploadHandler.php:327
+msgid "File too big"
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:330
+msgid "File uploaded partially"
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:333
+msgid "No file uploaded"
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:336
+msgid "No tmp folder"
+msgstr ""
+
+#: lib/Simpledownload/Base/UploadHandler.php:343
+msgid "Error with upload: "
+msgstr ""
+
+#: lib/Simpledownload/Base/Version.php:30 templates/user/header.tpl:12
+msgid "Simpledownload"
+msgstr ""
+
+#: lib/Simpledownload/Base/Version.php:32
+msgid "a module for simple download"
+msgstr ""
+
+#. ! url version of name, should be in lowercase without space
+#: lib/Simpledownload/Base/Version.php:34
+msgid "simpledownload"
+msgstr ""
+
+#: lib/Simpledownload/Base/Version.php:69
+msgid "simpledownload Downloads Display Hooks"
+msgstr ""
+
+#: lib/Simpledownload/Base/Version.php:87
+msgid "simpledownload Downloads Filter Hooks"
+msgstr ""
+
+#: lib/Simpledownload/Block/Base/ItemList.php:46
+msgid ""
+"Notice: This block will not be displayed until you activate the "
+"Simpledownload module."
+msgstr ""
+
+#: lib/Simpledownload/Block/Base/ItemList.php:185
+msgid "Simpledownload items"
+msgstr ""
+
+#: lib/Simpledownload/NewsletterPlugin/ItemList.php:26
+#: templates/admin/download/view.atom.tpl:4
+#: templates/admin/download/view.rss.tpl:11
+#: templates/user/download/view.atom.tpl:4
+#: templates/user/download/view.rss.tpl:11
+msgid "Latest downloads"
+msgstr ""
+
+#: lib/Simpledownload/NewsletterPlugin/ItemList.php:36
+msgid "List of downloads"
+msgstr ""
+
+#: lib/Simpledownload/NewsletterPlugin/ItemList.php:46
+msgid "This plugin shows a list of downloads of the Simpledownload module."
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/ListEntries.php:163
+msgid "All except approved"
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/ListEntries.php:164
+msgid "Shows all items except these which are approved"
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/View.php:215
+msgid "Bytes"
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/View.php:218
+msgid "KB"
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/View.php:222
+msgid "MB"
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/View.php:226
+msgid "GB"
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/Controller.php:214
+#, php-format
+msgid ""
+"The upload directory \"%s\" does not exist and could not be created. Try to "
+"create it yourself and make sure that this folder is accessible via the web "
+"and writable by the webserver."
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/Controller.php:220
+#, php-format
+msgid ""
+"Warning! The upload directory at \"%s\" exists but is not writable by the "
+"webserver."
+msgstr ""
+
+#: lib/Simpledownload/Util/Base/Controller.php:231
+#, php-format
+msgid "Warning! Could not write the .htaccess file at \"%s\"."
+msgstr ""
+
+#: lib/Simpledownload/Entity/Validator/Base/Download.php:31
+#, php-format
+msgid "Error! Field value may only contain digits (%s)."
+msgstr ""
+
+#: lib/Simpledownload/Entity/Validator/Base/Download.php:35
+#: lib/Simpledownload/Entity/Validator/Base/Download.php:43
+#: lib/Simpledownload/Entity/Validator/Base/Download.php:51
+#: lib/Simpledownload/Entity/Validator/Base/Download.php:55
+#, php-format
+msgid "Error! Length of field value must not be higher than %2$s (%1$s)."
+msgstr ""
+
+#: lib/Simpledownload/Entity/Validator/Base/Download.php:39
+#: lib/Simpledownload/Entity/Validator/Base/Download.php:47
+#: lib/Simpledownload/Entity/Validator/Base/Download.php:59
+#, php-format
+msgid "Error! Field value must not be empty (%s)."
+msgstr ""
+
+#: lib/Simpledownload/Entity/Repository/Base/Download.php:252
+#: lib/Simpledownload/Entity/Repository/Base/Download.php:277
+#: lib/Simpledownload/Entity/Repository/Base/Download.php:304
+#: lib/Simpledownload/Entity/Repository/Base/Download.php:331
+msgid "Invalid user identifier received."
+msgstr ""
+
+#: lib/Simpledownload/Entity/Repository/Base/Download.php:380
+#: lib/Simpledownload/Api/Base/Selection.php:68
+msgid "Invalid identifier received."
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:615
+msgid "Error! Could not load the associated workflow."
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:689
+msgid "Open preview page"
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:690
+msgid "Preview"
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:696
+#: lib/Simpledownload/Entity/Base/Download.php:732
+#: templates/admin/download/display.tpl:8
+msgid "Details"
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:706
+#: lib/Simpledownload/Entity/Base/Download.php:707
+#: lib/Simpledownload/Entity/Base/Download.php:742
+#: lib/Simpledownload/Entity/Base/Download.php:743
+msgid "Edit"
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:712
+#: lib/Simpledownload/Entity/Base/Download.php:748
+msgid "Reuse for new item"
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:713
+#: lib/Simpledownload/Entity/Base/Download.php:749
+msgid "Reuse"
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:721
+#: lib/Simpledownload/Entity/Base/Download.php:722
+#: lib/Simpledownload/Entity/Base/Download.php:757
+#: lib/Simpledownload/Entity/Base/Download.php:758
+msgid "Back to overview"
+msgstr ""
+
+#: lib/Simpledownload/Entity/Base/Download.php:962
+msgid "Error! Could not remove stored workflow. Deletion has been aborted."
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Selection.php:164
+msgid "Invalid object type received."
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Search.php:145
+msgid "Error! Could not save the search results."
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Mailz.php:32
+msgid "3 newest downloads"
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Mailz.php:33
+msgid "A list of the three newest downloads."
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Mailz.php:38
+msgid "3 random downloads"
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Mailz.php:39
+msgid "A list of three random downloads."
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/User.php:30
+msgid "Backend"
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/User.php:31
+msgid "Switch to administration area."
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/User.php:43
+#: lib/Simpledownload/Api/Base/Admin.php:43
+#: templates/admin/download/view.tpl:4 templates/user/download/view.tpl:4
+msgid "Download list"
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/User.php:60
+#: lib/Simpledownload/Api/Base/User.php:202
+msgid "Invalid arguments array received."
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Admin.php:30
+msgid "Frontend"
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Admin.php:31
+msgid "Switch to user area."
+msgstr ""
+
+#: lib/Simpledownload/Api/Base/Account.php:51
+msgid "Simpledownload Backend"
+msgstr ""
+
+#: lib/Simpledownload/Controller/Base/User.php:234
+#: lib/Simpledownload/Controller/Base/Admin.php:220
+#: lib/Simpledownload/Controller/Base/External.php:86
+msgid "Error! Invalid identifier received."
+msgstr ""
+
+#: lib/Simpledownload/Controller/Base/External.php:164
+msgid "Error: Invalid editor context given for external controller action."
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:14
+#: templates/contenttype/itemlist_edit.tpl:39
+#: templates/block/itemlist_modify.tpl:36
+msgid "Sorting"
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:16
+#: templates/contenttype/itemlist_edit.tpl:43
+#: templates/block/itemlist_modify.tpl:38
+msgid "Random"
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:17
+#: templates/contenttype/itemlist_edit.tpl:46
+#: templates/block/itemlist_modify.tpl:39
+msgid "Newest"
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:18
+#: templates/contenttype/itemlist_edit.tpl:49
+#: templates/block/itemlist_modify.tpl:40
+msgid "Default"
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:22
+#: templates/contenttype/itemlist_edit.tpl:55
+#: templates/block/itemlist_modify.tpl:45
+msgid "Amount"
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:27
+#: templates/contenttype/itemlist_edit.tpl:75
+#: templates/block/itemlist_modify.tpl:65
+msgid "Filter (expert option)"
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:30
+#: templates/contenttype/itemlist_edit.tpl:79
+#: templates/block/itemlist_modify.tpl:68
+msgid "Syntax examples"
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:30
+#: templates/contenttype/itemlist_edit.tpl:79
+#: templates/block/itemlist_modify.tpl:68
+msgid "or"
+msgstr ""
+
+#: templates/plugin_config/ItemList.tpl:36
+msgid "No object types found."
+msgstr ""
+
+#: templates/external/download/find.tpl:5
+#: templates/external/download/find.tpl:33
+msgid "Search and select download"
+msgstr ""
+
+#: templates/external/download/find.tpl:41
+#: templates/external/download/select.tpl:20
+#: templates/admin/include_categories_edit.tpl:11
+#: templates/admin/download/view_quickNav.tpl:21
+#: templates/contenttype/itemlist_edit.tpl:23
+#: templates/user/include_categories_edit.tpl:11
+#: templates/user/download/view_quickNav.tpl:21
+#: templates/block/itemlist_modify.tpl:16
+msgid "Category"
+msgstr ""
+
+#: templates/external/download/find.tpl:46
+#: templates/external/download/select.tpl:25
+#: templates/admin/include_categories_edit.tpl:3
+#: templates/admin/include_categories_edit.tpl:8
+#: templates/admin/include_categories_edit.tpl:14
+#: templates/admin/download/view_quickNav.tpl:26
+#: templates/admin/download/view.rss.tpl:41
+#: templates/admin/include_categories_display.tpl:4
+#: templates/admin/include_categories_display.tpl:7
+#: templates/contenttype/itemlist_edit.tpl:26
+#: templates/user/include_categories_edit.tpl:3
+#: templates/user/include_categories_edit.tpl:8
+#: templates/user/include_categories_edit.tpl:14
+#: templates/user/download/view_quickNav.tpl:26
+#: templates/user/download/view.rss.tpl:41
+#: templates/user/include_categories_display.tpl:4
+#: templates/user/include_categories_display.tpl:7
+#: templates/block/itemlist_modify.tpl:21
+msgid "Categories"
+msgstr ""
+
+#: templates/external/download/find.tpl:54
+#: templates/contenttype/itemlist_edit.tpl:31
+#: templates/block/itemlist_modify.tpl:29
+msgid "This is an optional filter."
+msgstr ""
+
+#: templates/external/download/find.tpl:61
+msgid "Paste as"
+msgstr ""
+
+#: templates/external/download/find.tpl:63
+msgid "Link to the download"
+msgstr ""
+
+#: templates/external/download/find.tpl:64
+msgid "ID of download"
+msgstr ""
+
+#: templates/external/download/find.tpl:70
+#: templates/external/download/select.tpl:39
+#: templates/admin/download/display.tpl:4
+#: templates/admin/download/display.tpl:22
+#: templates/admin/download/view.tpl:83 templates/admin/download/edit.tpl:63
+#: templates/user/download/display.tpl:4
+#: templates/user/download/display.tpl:19 templates/user/download/view.tpl:69
+#: templates/user/download/edit.tpl:57
+msgid "Download"
+msgstr ""
+
+#: templates/external/download/find.tpl:82
+#: templates/external/download/select.tpl:44
+#: templates/contenttype/itemlist_download_display_description.tpl:11
+msgid "No entries found."
+msgstr ""
+
+#: templates/external/download/find.tpl:89
+#: templates/external/download/select.tpl:50
+#: templates/admin/download/view_quickNav.tpl:52
+#: templates/user/download/view_quickNav.tpl:52
+msgid "Sort by"
+msgstr ""
+
+#: templates/external/download/find.tpl:91
+#: templates/external/download/select.tpl:52
+#: templates/admin/download/view_quickNav.tpl:55
+#: templates/user/download/view_quickNav.tpl:55
+msgid "Id"
+msgstr ""
+
+#: templates/external/download/find.tpl:92
+#: templates/external/download/select.tpl:53
+#: templates/admin/download/view_quickNav.tpl:39
+#: templates/admin/download/view_quickNav.tpl:56
+#: templates/admin/download/view.csv.tpl:3
+#: templates/user/download/view_quickNav.tpl:39
+#: templates/user/download/view_quickNav.tpl:56
+#: templates/user/download/view.csv.tpl:3
+msgid "Workflow state"
+msgstr ""
+
+#: templates/external/download/find.tpl:93
+#: templates/external/download/select.tpl:54
+#: templates/admin/download/display.tpl:13
+#: templates/admin/download/view_quickNav.tpl:57
+#: templates/admin/download/view.tpl:54 templates/admin/download/edit.tpl:31
+#: templates/admin/download/view.csv.tpl:3
+#: templates/user/download/display.tpl:10
+#: templates/user/download/view_quickNav.tpl:57
+#: templates/user/download/view.tpl:43 templates/user/download/edit.tpl:25
+#: templates/user/download/view.csv.tpl:3
+msgid "Doctitel"
+msgstr ""
+
+#: templates/external/download/find.tpl:94
+#: templates/external/download/select.tpl:55
+#: templates/admin/download/display.tpl:15
+#: templates/admin/download/view_quickNav.tpl:58
+#: templates/admin/download/view.tpl:57 templates/admin/download/edit.tpl:37
+#: templates/admin/download/view.csv.tpl:3
+#: templates/user/download/display.tpl:12
+#: templates/user/download/view_quickNav.tpl:58
+#: templates/user/download/view.tpl:46 templates/user/download/edit.tpl:31
+#: templates/user/download/view.csv.tpl:3
+msgid "Docdescription"
+msgstr ""
+
+#: templates/external/download/find.tpl:95
+#: templates/external/download/select.tpl:56
+#: templates/admin/download/display.tpl:17
+#: templates/admin/download/view_quickNav.tpl:59
+#: templates/admin/download/view.tpl:60 templates/admin/download/edit.tpl:46
+#: templates/admin/download/view.csv.tpl:3
+#: templates/user/download/display.tpl:14
+#: templates/user/download/view_quickNav.tpl:59
+#: templates/user/download/view.tpl:49 templates/user/download/edit.tpl:40
+#: templates/user/download/view.csv.tpl:3
+msgid "Uploaddocument"
+msgstr ""
+
+#: templates/external/download/find.tpl:96
+#: templates/external/download/select.tpl:57
+#: templates/admin/download/view_quickNav.tpl:60
+#: templates/user/download/view_quickNav.tpl:60
+msgid "Creation date"
+msgstr ""
+
+#: templates/external/download/find.tpl:97
+#: templates/external/download/select.tpl:58
+#: templates/admin/download/view_quickNav.tpl:61
+#: templates/user/download/view_quickNav.tpl:61
+msgid "Creator"
+msgstr ""
+
+#: templates/external/download/find.tpl:98
+#: templates/external/download/select.tpl:59
+#: templates/admin/download/view_quickNav.tpl:62
+#: templates/user/download/view_quickNav.tpl:62
+msgid "Update date"
+msgstr ""
+
+#: templates/external/download/find.tpl:101
+#: templates/external/download/select.tpl:62
+#: templates/admin/download/view_quickNav.tpl:65
+#: templates/user/download/view_quickNav.tpl:65
+msgid "ascending"
+msgstr ""
+
+#: templates/external/download/find.tpl:102
+#: templates/external/download/select.tpl:63
+#: templates/admin/download/view_quickNav.tpl:66
+#: templates/user/download/view_quickNav.tpl:66
+msgid "descending"
+msgstr ""
+
+#: templates/external/download/find.tpl:107
+#: templates/admin/download/view_quickNav.tpl:73
+#: templates/user/download/view_quickNav.tpl:73
+msgid "Page size"
+msgstr ""
+
+#: templates/external/download/find.tpl:120
+#: templates/external/download/select.tpl:68
+msgid "Search for"
+msgstr ""
+
+#: templates/external/download/find.tpl:122
+#: templates/external/download/select.tpl:70
+msgid "Filter"
+msgstr ""
+
+#: templates/external/download/find.tpl:128
+msgid "Change selection"
+msgstr ""
+
+#: templates/external/download/find.tpl:129
+#: templates/admin/download/edit.tpl:118 templates/user/download/edit.tpl:112
+msgid "Cancel"
+msgstr ""
+
+#: templates/external/download/select.tpl:4
+msgid "Download information"
+msgstr ""
+
+#: templates/admin/download/display.tpl:9 templates/admin/download/view.tpl:62
+#: templates/admin/download/view.tpl:92 templates/user/download/display.tpl:7
+#: templates/user/download/view.tpl:51 templates/user/download/view.tpl:78
+msgid "Actions"
+msgstr ""
+
+#: templates/admin/download/view_quickNav.tpl:6
+#: templates/user/download/view_quickNav.tpl:6
+msgid "Quick navigation"
+msgstr ""
+
+#: templates/admin/download/view_quickNav.tpl:48
+#: templates/user/download/view_quickNav.tpl:48
+msgid "Search"
+msgstr ""
+
+#: templates/admin/download/view_quickNav.tpl:84
+#: templates/user/download/view_quickNav.tpl:84
+msgid "OK"
+msgstr ""
+
+#: templates/admin/download/include_displayItemListMany.tpl:16
+#: templates/admin/download/include_displayItemListOne.tpl:13
+#: templates/user/download/include_displayItemListMany.tpl:16
+#: templates/user/download/include_displayItemListOne.tpl:13
+msgid "Open quick view window"
+msgstr ""
+
+#: templates/admin/download/include_displayItemListMany.tpl:16
+#: templates/admin/download/include_displayItemListOne.tpl:13
+#: templates/user/download/include_displayItemListMany.tpl:16
+#: templates/user/download/include_displayItemListOne.tpl:13
+msgid "Quick view"
+msgstr ""
+
+#: templates/admin/download/view.tpl:13 templates/admin/download/edit.tpl:10
+#: templates/user/download/view.tpl:10 templates/user/download/edit.tpl:9
+msgid "Create download"
+msgstr ""
+
+#: templates/admin/download/view.tpl:23 templates/user/download/view.tpl:20
+msgid "Back to paginated view"
+msgstr ""
+
+#: templates/admin/download/view.tpl:29 templates/user/download/view.tpl:26
+msgid "Show all entries"
+msgstr ""
+
+#: templates/admin/download/view.tpl:73 templates/user/download/view.tpl:59
+msgid "View detail page"
+msgstr ""
+
+#: templates/admin/download/view.tpl:105 templates/user/download/view.tpl:91
+#: templates/mailz/itemlist_download_html.tpl:10
+#: templates/mailz/itemlist_download_text.tpl:7
+msgid "No downloads found."
+msgstr ""
+
+#: templates/admin/download/view.tpl:117
+msgid "With selected downloads"
+msgstr ""
+
+#: templates/admin/download/view.tpl:119
+msgid "Choose action"
+msgstr ""
+
+#: templates/admin/download/view.atom.tpl:5
+#: templates/admin/download/view.rss.tpl:12
+#: templates/user/download/view.atom.tpl:5
+#: templates/user/download/view.rss.tpl:12
+msgid "A direct feed showing the list of downloads"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:7 templates/admin/download/edit.tpl:13
+#: templates/user/download/edit.tpl:7 templates/user/download/edit.tpl:11
+msgid "Edit download"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:28 templates/user/download/edit.tpl:22
+msgid "Content"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:32 templates/user/download/edit.tpl:26
+msgid "Enter the doctitel of the download"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:38 templates/user/download/edit.tpl:32
+msgid "Enter the docdescription of the download"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:51 templates/user/download/edit.tpl:45
+msgid "Reset to empty value"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:54 templates/user/download/edit.tpl:48
+msgid "Allowed file extensions:"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:58 templates/user/download/edit.tpl:52
+msgid "Current file"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:97 templates/user/download/edit.tpl:91
+msgid "Return control"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:99 templates/user/download/edit.tpl:93
+msgid "Create another item after save"
+msgstr ""
+
+#: templates/admin/download/edit.tpl:112 templates/user/download/edit.tpl:106
+msgid "Really delete this download?"
+msgstr ""
+
+#: templates/admin/include_standardfields_edit.tpl:4
+#: templates/admin/include_standardfields_edit.tpl:9
+#: templates/admin/include_standardfields_display.tpl:4
+#: templates/admin/include_standardfields_display.tpl:7
+#: templates/user/include_standardfields_edit.tpl:4
+#: templates/user/include_standardfields_edit.tpl:9
+#: templates/user/include_standardfields_display.tpl:4
+#: templates/user/include_standardfields_display.tpl:7
+msgid "Creation and update"
+msgstr ""
+
+#: templates/admin/include_standardfields_edit.tpl:13
+#: templates/user/include_standardfields_edit.tpl:13
+#, php-format
+msgid "Created by %s"
+msgstr ""
+
+#: templates/admin/include_standardfields_edit.tpl:14
+#: templates/user/include_standardfields_edit.tpl:14
+#, php-format
+msgid "Created on %s"
+msgstr ""
+
+#: templates/admin/include_standardfields_edit.tpl:18
+#: templates/user/include_standardfields_edit.tpl:18
+#, php-format
+msgid "Updated by %s"
+msgstr ""
+
+#: templates/admin/include_standardfields_edit.tpl:19
+#: templates/user/include_standardfields_edit.tpl:19
+#, php-format
+msgid "Updated on %s"
+msgstr ""
+
+#: templates/admin/include_standardfields_display.tpl:11
+#: templates/user/include_standardfields_display.tpl:11
+msgid "Creation"
+msgstr ""
+
+#: templates/admin/include_standardfields_display.tpl:22
+#: templates/user/include_standardfields_display.tpl:22
+#, php-format
+msgid "Created by %1$s on %2$s"
+msgstr ""
+
+#: templates/admin/include_standardfields_display.tpl:25
+#: templates/user/include_standardfields_display.tpl:25
+msgid "Last update"
+msgstr ""
+
+#: templates/admin/include_standardfields_display.tpl:36
+#: templates/user/include_standardfields_display.tpl:36
+#, php-format
+msgid "Updated by %1$s on %2$s"
+msgstr ""
+
+#: templates/contenttype/item_edit.tpl:5
+#: templates/contenttype/itemlist_edit.tpl:4
+#: templates/block/itemlist_modify.tpl:3
+msgid "Object type"
+msgstr ""
+
+#: templates/contenttype/item_edit.tpl:8
+#: templates/contenttype/itemlist_edit.tpl:8
+msgid ""
+"If you change this please save the element once to reload the parameters "
+"below."
+msgstr ""
+
+#: templates/contenttype/item_edit.tpl:11
+msgid ""
+"Please select your item here. You can resort the dropdown list and reduce "
+"it's entries by applying filters. On the right side you will see a preview "
+"of the selected entry."
+msgstr ""
+
+#: templates/contenttype/item_edit.tpl:17
+msgid "Link to object"
+msgstr ""
+
+#: templates/contenttype/item_edit.tpl:19
+msgid "Embed object display"
+msgstr ""
+
+#: templates/contenttype/itemlist_download_display_description.tpl:8
+#: templates/contenttype/itemlist_download_display.tpl:4
+msgid "Read more"
+msgstr ""
+
+#: templates/contenttype/itemlist_edit.tpl:61
+#: templates/block/itemlist_modify.tpl:50
+msgid "Template"
+msgstr ""
+
+#: templates/contenttype/itemlist_edit.tpl:71
+#: templates/block/itemlist_modify.tpl:61
+msgid "Example"
+msgstr ""
+
+#: templates/block/itemlist_modify.tpl:7
+msgid ""
+"If you change this please save the block once to reload the parameters below."
+msgstr ""

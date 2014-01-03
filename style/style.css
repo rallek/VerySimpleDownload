@@ -1,0 +1,68 @@
+/* view pages */
+div#z-maincontent.z-module-simpledownload table tbody tr td {
+    vertical-align: top;
+}
+
+/* display pages */
+.simpledownload-display.with-rightbox div.z-panel-content {
+    float: left;
+    width: 79%;
+}
+.simpledownload-display div.simpledownload-rightbox {
+    float: right;
+    margin: 0 1em;
+    padding: .5em;
+    width: 20%;
+    /*border: 1px solid #666;*/
+}
+
+.simpledownload-display div.simpledownload-rightbox h3 {
+    color: #333;
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+.simpledownload-display div.simpledownload-rightbox p.managelink {
+    margin-left: 18px;
+}
+/* validation */
+div.z-formrow input.required, div.z-formrow textarea.required {
+    border: 1px solid #00a8e6;
+}
+div.z-formrow input.validation-failed, div.z-formrow textarea.validation-failed {
+    border: 1px solid #f30;
+    color: #f30;
+}
+div.z-formrow input.validation-passed, div.z-formrow textarea.validation-passed {
+    border: 1px solid #0c0;
+    color: #000;
+}
+
+.validation-advice {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #f90;
+    color: #fff;
+    font-weight: 700;
+}
+div.simpledownload-view form.simpledownload-quicknav {
+    margin: 10px 0;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+}
+
+div.simpledownload-view form.simpledownload-quicknav fieldset {
+    padding: 3px 10px;
+    margin-bottom: 0;
+}
+
+div.simpledownload-view form.simpledownload-quicknav fieldset h3 {
+    margin-top: 0;
+    display: none;
+}
+
+div.simpledownload-view form.simpledownload-quicknav fieldset #num {
+    width: 50px;
+    text-align: right;
+}

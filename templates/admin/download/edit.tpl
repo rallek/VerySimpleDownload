@@ -56,10 +56,9 @@
                 {if $download.uploaddocument ne ''}
                     <span class="z-formnote">
                         {gt text='Current file'}:
-                        {* Hier den Fix https://github.com/Guite/MostGenerator/issues/457 einbauen, solange der noch nicht gelöst ist*}
-						<a href="{$download.uploaddocumentFullPathUrl}" {if $download.uploaddocumentMeta.isImage} rel="imageviewer[download]"{/if}>
+                        <a href="{$download.uploaddocumentFullPathUrl}" title="{$formattedEntityTitle|replace:"\"":""}"{if $download.uploaddocumentMeta.isImage} rel="imageviewer[download]"{/if}>
                         {if $download.uploaddocumentMeta.isImage}
-                            {thumb image=$download.uploaddocumentFullPath objectid="download-`$download.id`" preset=$downloadThumbPresetUploaddocument tag=true img_alt=$download->getTitleFromDisplayPattern()}
+                            {thumb image=$download.uploaddocumentFullPath objectid="download-`$download.id`" preset=$downloadThumbPresetUploaddocument tag=true img_alt=$formattedEntityTitle}
                         {else}
                             {gt text='Download'} ({$download.uploaddocumentMeta.size|simpledownloadGetFileSize:$download.uploaddocumentFullPath:false:false})
                         {/if}

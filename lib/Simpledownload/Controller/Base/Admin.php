@@ -525,7 +525,7 @@ class Simpledownload_Controller_Base_Admin extends Zikula_AbstractController
                    ->assign('commandName', $commandName)
                    ->assign('jcssConfig', JCSSUtil::getJSConfig());
 
-        $view->display('admin/inlineRedirectHandler.tpl');
+        $this->view->display('admin/inlineRedirectHandler.tpl');
 
         return true;
     }

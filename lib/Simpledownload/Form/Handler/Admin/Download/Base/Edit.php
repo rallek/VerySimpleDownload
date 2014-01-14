@@ -83,6 +83,11 @@ class Simpledownload_Form_Handler_Admin_Download_Base_Edit extends Simpledownloa
         // assign data to template as array (makes translatable support easier)
         $this->view->assign($this->objectTypeLower, $entityData);
     
+        if ($this->mode == 'edit') {
+            // assign formatted title
+            $this->view->assign('formattedEntityTitle', $entity->getTitleFromDisplayPattern();
+        }
+    
         // everything okay, no initialization errors occured
         return true;
     }

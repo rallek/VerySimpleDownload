@@ -18,8 +18,3 @@ class Simpledownload_ContentType_ItemList extends Simpledownload_ContentType_Bas
 {
     // feel free to extend the content type here
 }
-
-function Simpledownload_Api_ContentTypes_itemlist($args)
-{
-    return new Simpledownload_Api_ContentTypes_itemListPlugin();
-}

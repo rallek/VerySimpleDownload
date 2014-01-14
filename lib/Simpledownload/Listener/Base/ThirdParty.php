@@ -40,6 +40,7 @@ class Simpledownload_Listener_Base_ThirdParty
         // intended is using the add() method to add a plugin like below
         $types = $event->getSubject();
         
+        
         // plugin for showing a single item
         $types->add('Simpledownload_ContentType_Item');
         

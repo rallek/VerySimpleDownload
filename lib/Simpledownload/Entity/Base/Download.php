@@ -65,7 +65,6 @@ abstract class Simpledownload_Entity_Base_Download extends Zikula_EntityAccess
     protected $workflowState = 'initial';
     
     /**
-     * @Gedmo\SortableGroup
      * @ORM\Column(length=255)
      * @var string $doctitel.
      */

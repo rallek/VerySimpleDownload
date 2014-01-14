@@ -19,8 +19,7 @@ function Simpledownload(editor) {
         id       : 'Simpledownload',
         tooltip  : 'Insert Simpledownload object',
      // image    : _editor_url + 'plugins/Simpledownload/img/ed_Simpledownload.gif',
-     // image    : '/images/icons/extrasmall/favorites.png',
-		image    : '/modules/Simpledownload/images/editor.png',
+        image    : '/modules/Simpledownload/images/editor.png',
         textMode : false,
         action   : function (editor) {
             var url = Zikula.Config.baseURL + 'index.php'/*Zikula.Config.entrypoint*/ + '?module=Simpledownload&type=external&func=finder&editor=xinha';

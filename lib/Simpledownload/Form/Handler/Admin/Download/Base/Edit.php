@@ -85,7 +85,7 @@ class Simpledownload_Form_Handler_Admin_Download_Base_Edit extends Simpledownloa
     
         if ($this->mode == 'edit') {
             // assign formatted title
-            $this->view->assign('formattedEntityTitle', $entity->getTitleFromDisplayPattern();
+            $this->view->assign('formattedEntityTitle', $entity->getTitleFromDisplayPattern());
         }
     
         // everything okay, no initialization errors occured

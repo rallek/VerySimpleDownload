@@ -1,12 +1,11 @@
-Simpledownload 0.0.1
+koester\Simpledownload 0.0.1
 ===========================
 
 a module for simple download
 
 This module is intended for being used with Zikula 1.3.5 and 1.3.6.
 
-THIS MODULE IS FAR AWAY TO BE READY TO USE!
+For questions and other remarks visit our homepage http://zikula.de.
 
-But modulestudio is that fantastic good that Simpledownload works out of the box :-). Only things I have made: https://github.com/rallek/SimpleDownload/blob/master/CHANGELOG.md
-
-If you need help with this module help yourself! Commits and helping (teaching) me is very wellcome!
+Ralf Koester (ralf@familie-koester.de)
+http://zikula.de

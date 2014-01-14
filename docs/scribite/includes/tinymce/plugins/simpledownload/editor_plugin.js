@@ -42,7 +42,6 @@
                 title : 'simpledownload.desc',
                 cmd : 'mceSimpledownload',
              // image : url + '/img/Simpledownload.gif'
-             // image : '/images/icons/extrasmall/favorites.png'
 				image : '/modules/Simpledownload/images/editor.png'
             });
 

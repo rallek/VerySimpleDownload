@@ -1,5 +1,5 @@
 {* purpose of this template: downloads rss feed in user area *}
-{simpledownloadTemplateHeaders contentType='application/rss+xml'}<?xml version="1.0" encoding="{charset assign='charset'}{if $charset eq 'ISO-8859-15'}ISO-8859-1{else}{$charset}{/if}" ?>
+{verysimpledownloadTemplateHeaders contentType='application/rss+xml'}<?xml version="1.0" encoding="{charset assign='charset'}{if $charset eq 'ISO-8859-15'}ISO-8859-1{else}{$charset}{/if}" ?>
 <rss version="2.0"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
@@ -29,9 +29,9 @@
 
 {foreach item='download' from=$items}
     <item>
-        <title><![CDATA[{if isset($download.updatedDate) && $download.updatedDate ne null}{$download.updatedDate|dateformat} - {/if}{$download->getTitleFromDisplayPattern()|notifyfilters:'simpledownload.filterhook.downloads'}]]></title>
-        <link>{modurl modname='Simpledownload' type='user' func='display' ot='download' id=$download.id fqurl='1'}</link>
-        <guid>{modurl modname='Simpledownload' type='user' func='display' ot='download' id=$download.id fqurl='1'}</guid>
+        <title><![CDATA[{if isset($download.updatedDate) && $download.updatedDate ne null}{$download.updatedDate|dateformat} - {/if}{$download->getTitleFromDisplayPattern()|notifyfilters:'verysimpledownload.filterhook.downloads'}]]></title>
+        <link>{modurl modname='VerySimpleDownload' type='user' func='display' ot='download' id=$download.id fqurl='1'}</link>
+        <guid>{modurl modname='VerySimpleDownload' type='user' func='display' ot='download' id=$download.id fqurl='1'}</guid>
         {if isset($download.createdUserId)}
             {usergetvar name='uname' uid=$download.createdUserId assign='cr_uname'}
             {usergetvar name='name' uid=$download.createdUserId assign='cr_name'}
@@ -42,7 +42,7 @@
 
         <description>
             <![CDATA[
-            {$download.docdescription|replace:'<br>':'<br />'}
+            {$download.downloadDescription|replace:'<br>':'<br />'}
             ]]>
         </description>
         {if isset($download.createdDate) && $download.createdDate ne null}

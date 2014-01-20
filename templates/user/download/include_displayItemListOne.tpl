@@ -5,12 +5,12 @@
 <h4>
 {strip}
 {if !$nolink}
-    <a href="{modurl modname='Simpledownload' type='user' func='display' ot='download' id=$item.id}" title="{$item->getTitleFromDisplayPattern()|replace:"\"":""}">
+    <a href="{modurl modname='VerySimpleDownload' type='user' func='display' ot='download' id=$item.id}" title="{$item->getTitleFromDisplayPattern()|replace:"\"":""}">
 {/if}
     {$item->getTitleFromDisplayPattern()}
 {if !$nolink}
     </a>
-    <a id="downloadItem{$item.id}Display" href="{modurl modname='Simpledownload' type='user' func='display' ot='download' id=$item.id theme='Printer' forcelongurl=true}" title="{gt text='Open quick view window'}" class="z-hide">{icon type='view' size='extrasmall' __alt='Quick view'}</a>
+    <a id="downloadItem{$item.id}Display" href="{modurl modname='VerySimpleDownload' type='user' func='display' ot='download' id=$item.id theme='Printer' forcelongurl=true}" title="{gt text='Open quick view window'}" class="z-hide">{icon type='view' size='extrasmall' __alt='Quick view'}</a>
 {/if}
 {/strip}
 </h4>
@@ -18,7 +18,7 @@
 <script type="text/javascript">
 /* <![CDATA[ */
     document.observe('dom:loaded', function() {
-        simdownInitInlineWindow($('downloadItem{{$item.id}}Display'), '{{$item->getTitleFromDisplayPattern()|replace:"'":""}}');
+        vesidoInitInlineWindow($('downloadItem{{$item.id}}Display'), '{{$item->getTitleFromDisplayPattern()|replace:"'":""}}');
     });
 /* ]]> */
 </script>

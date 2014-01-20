@@ -3,7 +3,7 @@
 <ul>
 {foreach item='download' from=$items}
     <li>
-        <a href="{modurl modname='Simpledownload' type='user' func='display' ot=$objectType id=$download.id fqurl=true}">{$download->getTitleFromDisplayPattern()}
+        <a href="{modurl modname='VerySimpleDownload' type='user' func='display' ot=$objectType id=$download.id fqurl=true}">{$download->getTitleFromDisplayPattern()}
         </a>
     </li>
 {foreachelse}

@@ -1,0 +1,88 @@
+application VerySimpleDownload {
+	vendor Koester
+	author "Ralf Koester"
+	email "ralf@zikula.de"
+	url "http://support.zikula.de"
+	
+	prefix vesido
+	targetCoreVersion ZK135
+	modelLayer {
+		modelContainer Model {
+			documentation "a very simple module to mangage your download files"
+			numExampleRows 0
+			entities {
+				entity download leading categorisable categorisableMultiSelection {
+					documentation "your download files"
+					nameMultiple downloads
+					workflow STANDARD
+					ownerPermission true
+					fields {
+						string downloadTitle leading {
+							documentation "The title for the download"
+						},
+						text downloadDescription {
+							documentation "the description of the download"
+							mandatory false
+						},
+						upload fileUpload {
+							documentation "please select a file for uploading"
+							allowedExtensions "pdf, doc, docx, zip"
+							allowedFileSize 102400
+						}
+					}
+				}
+			}
+			variables {
+				varContainer Variables {
+					vars {
+						intVar pageSize {
+							value "10"
+						},
+						textVar myFileExtensions {
+							documentation "here you can change the allowed file extensions"
+							value "pdf, doc, docx, zip"
+						},
+						intVar myFileSize {
+							documentation "here you can change the allowed file size"
+							value "102400"
+						}
+					}
+				}
+			}
+		}
+	}
+	controllerLayer {
+		controllerContainer Controller {
+			modelContext ( "VerySimpleDownload.Model" )
+			processViews "VerySimpleDownload.View"
+			controllers {
+				adminController Admin {
+					actions {
+						mainAction Main,
+						viewAction View,
+						displayAction Display,
+						editAction Edit
+					}
+				},
+				userController User {
+					actions {
+						mainAction Main,
+						viewAction View,
+						displayAction Display,
+						editAction Edit
+					}
+				},
+				ajaxController Ajax {
+					actions {
+						mainAction Main
+					}
+				}
+			}
+		}
+	}
+	viewLayer {
+		viewContainer View {
+			controller "VerySimpleDownload.Controller"
+		}
+	}
+}

@@ -1,8 +1,8 @@
 {* purpose of this template: downloads xml inclusion template in user area *}
 <download id="{$item.id}" createdon="{$item.createdDate|dateformat}" updatedon="{$item.updatedDate|dateformat}">
     <id>{$item.id}</id>
-    <doctitel><![CDATA[{$item.doctitel}]]></doctitel>
-    <docdescription><![CDATA[{$item.docdescription}]]></docdescription>
-    <uploaddocument{if $item.uploaddocument ne ''} extension="{$item.uploaddocumentMeta.extension}" size="{$item.uploaddocumentMeta.size}" isImage="{if $item.uploaddocumentMeta.isImage}true{else}false{/if}"{if $item.uploaddocumentMeta.isImage} width="{$item.uploaddocumentMeta.width}" height="{$item.uploaddocumentMeta.height}" format="{$item.uploaddocumentMeta.format}"{/if}{/if}>{$item.uploaddocument}</uploaddocument>
-    <workflowState>{$item.workflowState|simpledownloadObjectState:false|lower}</workflowState>
+    <downloadTitle><![CDATA[{$item.downloadTitle}]]></downloadTitle>
+    <downloadDescription><![CDATA[{$item.downloadDescription}]]></downloadDescription>
+    <fileUpload{if $item.fileUpload ne ''} extension="{$item.fileUploadMeta.extension}" size="{$item.fileUploadMeta.size}" isImage="{if $item.fileUploadMeta.isImage}true{else}false{/if}"{if $item.fileUploadMeta.isImage} width="{$item.fileUploadMeta.width}" height="{$item.fileUploadMeta.height}" format="{$item.fileUploadMeta.format}"{/if}{/if}>{$item.fileUpload}</fileUpload>
+    <workflowState>{$item.workflowState|verysimpledownloadObjectState:false|lower}</workflowState>
 </download>

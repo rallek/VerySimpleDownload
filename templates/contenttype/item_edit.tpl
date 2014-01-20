@@ -2,14 +2,14 @@
 
 <div style="margin-left: 80px">
     <div class="z-formrow">
-        {formlabel for='simpledownloadObjectType' __text='Object type'}
-            {simpledownloadObjectTypeSelector assign='allObjectTypes'}
-            {formdropdownlist id='simpledownloadObjectType' dataField='objectType' group='data' mandatory=true items=$allObjectTypes}
+        {formlabel for='verySimpleDownloadObjectType' __text='Object type'}
+            {verysimpledownloadObjectTypeSelector assign='allObjectTypes'}
+            {formdropdownlist id='verySimpleDownloadObjectType' dataField='objectType' group='data' mandatory=true items=$allObjectTypes}
             <span class="z-sub z-formnote">{gt text='If you change this please save the element once to reload the parameters below.'}</span>
     </div>
     <div{* class="z-formrow"*}>
         <p>{gt text='Please select your item here. You can resort the dropdown list and reduce it\'s entries by applying filters. On the right side you will see a preview of the selected entry.'}</p>
-        {simpledownloadItemSelector id='id' group='data' objectType=$objectType}
+        {verysimpledownloadItemSelector id='id' group='data' objectType=$objectType}
     </div>
 
     <div{* class="z-formrow"*}>

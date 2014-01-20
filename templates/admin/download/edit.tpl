@@ -1,7 +1,7 @@
 {* purpose of this template: build the Form to edit an instance of download *}
 {include file='admin/header.tpl'}
-{pageaddvar name='javascript' value='modules/Simpledownload/javascript/Simpledownload_editFunctions.js'}
-{pageaddvar name='javascript' value='modules/Simpledownload/javascript/Simpledownload_validation.js'}
+{pageaddvar name='javascript' value='modules/VerySimpleDownload/javascript/VerySimpleDownload_editFunctions.js'}
+{pageaddvar name='javascript' value='modules/VerySimpleDownload/javascript/VerySimpleDownload_validation.js'}
 
 {if $mode eq 'edit'}
     {gt text='Edit download' assign='templateTitle'}
@@ -13,7 +13,7 @@
     {gt text='Edit download' assign='templateTitle'}
     {assign var='adminPageIcon' value='edit'}
 {/if}
-<div class="simpledownload-download simpledownload-edit">
+<div class="verysimpledownload-download verysimpledownload-edit">
     {pagesetvar name='title' value=$templateTitle}
     <div class="z-admin-content-pagetitle">
         {icon type=$adminPageIcon size='small' alt=$templateTitle}
@@ -21,53 +21,57 @@
     </div>
 {form enctype='multipart/form-data' cssClass='z-form'}
     {* add validation summary and a <div> element for styling the form *}
-    {simpledownloadFormFrame}
-    {formsetinitialfocus inputId='doctitel'}
+    {verysimpledownloadFormFrame}
+    {formsetinitialfocus inputId='downloadTitle'}
 
     <fieldset>
         <legend>{gt text='Content'}</legend>
         
         <div class="z-formrow">
-            {formlabel for='doctitel' __text='Doctitel' mandatorysym='1' cssClass=''}
-            {formtextinput group='download' id='doctitel' mandatory=true readOnly=false __title='Enter the doctitel of the download' textMode='singleline' maxLength=255 cssClass='required' }
-            {simpledownloadValidationError id='doctitel' class='required'}
+            {gt text='The title for the download' assign='toolTip'}
+            {formlabel for='downloadTitle' __text='Download title' mandatorysym='1' cssClass='verysimpledownload-form-tooltips' title=$toolTip}
+            {formtextinput group='download' id='downloadTitle' mandatory=true readOnly=false __title='Enter the download title of the download' textMode='singleline' maxLength=255 cssClass='required' }
+            {verysimpledownloadValidationError id='downloadTitle' class='required'}
         </div>
         
         <div class="z-formrow">
-            {formlabel for='docdescription' __text='Docdescription' cssClass=''}
-            {formtextinput group='download' id='docdescription' mandatory=false __title='Enter the docdescription of the download' textMode='multiline' rows='6' cols='50' cssClass='' }
+            {gt text='the description of the download' assign='toolTip'}
+            {formlabel for='downloadDescription' __text='Download description' cssClass='verysimpledownload-form-tooltips' title=$toolTip}
+            {formtextinput group='download' id='downloadDescription' mandatory=false __title='Enter the download description of the download' textMode='multiline' rows='6' cols='50' cssClass='' }
         </div>
         
         <div class="z-formrow">
+            {gt text='please select a file for uploading' assign='toolTip'}
             {assign var='mandatorySym' value='1'}
             {if $mode ne 'create'}
                 {assign var='mandatorySym' value='0'}
             {/if}
-            {formlabel for='uploaddocument' __text='Uploaddocument' mandatorysym=$mandatorySym cssClass=''}<br />{* break required for Google Chrome *}
+            {formlabel for='fileUpload' __text='File upload' mandatorysym=$mandatorySym cssClass='verysimpledownload-form-tooltips' title=$toolTip}<br />{* break required for Google Chrome *}
             {if $mode eq 'create'}
-                {formuploadinput group='download' id='uploaddocument' mandatory=true readOnly=false cssClass='required validate-upload' }
+                {formuploadinput group='download' id='fileUpload' mandatory=true readOnly=false cssClass='required validate-upload' }
             {else}
-                {formuploadinput group='download' id='uploaddocument' mandatory=false readOnly=false cssClass=' validate-upload' }
-                <span class="z-formnote"><a id="resetUploaddocumentVal" href="javascript:void(0);" class="z-hide">{gt text='Reset to empty value'}</a></span>
+                {formuploadinput group='download' id='fileUpload' mandatory=false readOnly=false cssClass=' validate-upload' }
+                <span class="z-formnote"><a id="resetFileUploadVal" href="javascript:void(0);" class="z-hide">{gt text='Reset to empty value'}</a></span>
             {/if}
             
-                <span class="z-formnote">{gt text='Allowed file extensions:'} <span id="uploaddocumentFileExtensions">pdf, zip, doc, docx, xls, xlsx</span></span>
+                <span class="z-formnote">{gt text='Allowed file extensions:'} <span id="fileUploadFileExtensions">{$modvars.VerySimpleDownload.myFileExtensions}</span></span>
+            <span class="z-formnote">{gt text='Allowed file size:'} {$modvars.VerySimpleDownload.myFileSize|verysimpledownloadGetFileSize:'':false:false}</span>
             {if $mode ne 'create'}
-                {if $download.uploaddocument ne ''}
+                {if $download.fileUpload ne ''}
                     <span class="z-formnote">
                         {gt text='Current file'}:
-                        <a href="{$download.uploaddocumentFullPathUrl}" title="{$formattedEntityTitle|replace:"\"":""}"{if $download.uploaddocumentMeta.isImage} rel="imageviewer[download]"{/if}>
-                        {if $download.uploaddocumentMeta.isImage}
-                            {thumb image=$download.uploaddocumentFullPath objectid="download-`$download.id`" preset=$downloadThumbPresetUploaddocument tag=true img_alt=$formattedEntityTitle}
+                        <a href="{$download.fileUploadFullPathUrl}" title="{$formattedEntityTitle|replace:"\"":""}"{if $download.fileUploadMeta.isImage} rel="imageviewer[download]"{/if}>
+                        {if $download.fileUploadMeta.isImage}
+                            {thumb image=$download.fileUploadFullPath objectid="download-`$download.id`" preset=$downloadThumbPresetFileUpload tag=true img_alt=$formattedEntityTitle}
                         {else}
-                            {gt text='Download'} ({$download.uploaddocumentMeta.size|simpledownloadGetFileSize:$download.uploaddocumentFullPath:false:false})
+                            {gt text='Download'} ({$download.fileUploadMeta.size|verysimpledownloadGetFileSize:$download.fileUploadFullPath:false:false})
                         {/if}
                         </a>
                     </span>
                 {/if}
             {/if}
-            {simpledownloadValidationError id='uploaddocument' class='required'}
-            {simpledownloadValidationError id='uploaddocument' class='validate-upload'}
+            {verysimpledownloadValidationError id='fileUpload' class='required'}
+            {verysimpledownloadValidationError id='fileUpload' class='validate-upload'}
         </div>
     </fieldset>
     
@@ -79,9 +83,9 @@
     {* include display hooks *}
     {if $mode ne 'create'}
         {assign var='hookId' value=$download.id}
-        {notifydisplayhooks eventname='simpledownload.ui_hooks.downloads.form_edit' id=$hookId assign='hooks'}
+        {notifydisplayhooks eventname='verysimpledownload.ui_hooks.downloads.form_edit' id=$hookId assign='hooks'}
     {else}
-        {notifydisplayhooks eventname='simpledownload.ui_hooks.downloads.form_edit' id=null assign='hooks'}
+        {notifydisplayhooks eventname='verysimpledownload.ui_hooks.downloads.form_edit' id=null assign='hooks'}
     {/if}
     {if is_array($hooks) && count($hooks)}
         {foreach key='providerArea' item='hook' from=$hooks}
@@ -117,7 +121,7 @@
     {/foreach}
         {formbutton id='btnCancel' commandName='cancel' __text='Cancel' class='z-bt-cancel'}
     </div>
-    {/simpledownloadFormFrame}
+    {/verysimpledownloadFormFrame}
 {/form}
 </div>
 {include file='admin/footer.tpl'}
@@ -148,7 +152,7 @@
 
     document.observe('dom:loaded', function() {
 
-        simdownAddCommonValidationRules('download', '{{if $mode ne 'create'}}{{$download.id}}{{/if}}');
+        vesidoAddCommonValidationRules('download', '{{if $mode ne 'create'}}{{$download.id}}{{/if}}');
         {{* observe validation on button events instead of form submit to exclude the cancel command *}}
         formValidator = new Validation('{{$__formid}}', {onSubmit: false, immediate: true, focusOnError: false});
         {{if $mode ne 'create'}}
@@ -163,8 +167,8 @@
             }
         });
 
-        Zikula.UI.Tooltips($$('.simpledownload-form-tooltips'));
-        simdownInitUploadField('uploaddocument');
+        Zikula.UI.Tooltips($$('.verysimpledownload-form-tooltips'));
+        vesidoInitUploadField('fileUpload');
     });
 
 /* ]]> */

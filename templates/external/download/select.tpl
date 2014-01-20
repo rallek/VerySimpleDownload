@@ -16,7 +16,7 @@
     {nocache}
     {foreach key='propertyName' item='propertyId' from=$properties}
         <p>
-            {modapifunc modname='Simpledownload' type='category' func='hasMultipleSelection' ot='download' registry=$propertyName assign='hasMultiSelection'}
+            {modapifunc modname='VerySimpleDownload' type='category' func='hasMultipleSelection' ot='download' registry=$propertyName assign='hasMultiSelection'}
             {gt text='Category' assign='categoryLabel'}
             {assign var='categorySelectorId' value='catid'}
             {assign var='categorySelectorName' value='catid'}
@@ -29,7 +29,7 @@
             {/if}
             <label for="{$baseID}_{$categorySelectorId}{$propertyName}"{$leftSide}>{$categoryLabel}:</label>
             &nbsp;
-            {selector_category name="`$baseID`_`$categorySelectorName``$propertyName`" field='id' selectedValue=$catIds.$propertyName categoryRegistryModule='Simpledownload' categoryRegistryTable=$objectType categoryRegistryProperty=$propertyName defaultText=$lblDefault editLink=false multipleSize=$categorySelectorSize}
+            {selector_category name="`$baseID`_`$categorySelectorName``$propertyName`" field='id' selectedValue=$catIds.$propertyName categoryRegistryModule='VerySimpleDownload' categoryRegistryTable=$objectType categoryRegistryProperty=$propertyName defaultText=$lblDefault editLink=false multipleSize=$categorySelectorSize}
             <br{$break} />
         </p>
     {/foreach}
@@ -51,9 +51,9 @@
     <select id="{$baseID}Sort" name="sort"{$rightSide}>
         <option value="id"{if $sort eq 'id'} selected="selected"{/if}>{gt text='Id'}</option>
         <option value="workflowState"{if $sort eq 'workflowState'} selected="selected"{/if}>{gt text='Workflow state'}</option>
-        <option value="doctitel"{if $sort eq 'doctitel'} selected="selected"{/if}>{gt text='Doctitel'}</option>
-        <option value="docdescription"{if $sort eq 'docdescription'} selected="selected"{/if}>{gt text='Docdescription'}</option>
-        <option value="uploaddocument"{if $sort eq 'uploaddocument'} selected="selected"{/if}>{gt text='Uploaddocument'}</option>
+        <option value="downloadTitle"{if $sort eq 'downloadTitle'} selected="selected"{/if}>{gt text='Download title'}</option>
+        <option value="downloadDescription"{if $sort eq 'downloadDescription'} selected="selected"{/if}>{gt text='Download description'}</option>
+        <option value="fileUpload"{if $sort eq 'fileUpload'} selected="selected"{/if}>{gt text='File upload'}</option>
         <option value="createdDate"{if $sort eq 'createdDate'} selected="selected"{/if}>{gt text='Creation date'}</option>
         <option value="createdUserId"{if $sort eq 'createdUserId'} selected="selected"{/if}>{gt text='Creator'}</option>
         <option value="updatedDate"{if $sort eq 'updatedDate'} selected="selected"{/if}>{gt text='Update date'}</option>
@@ -67,7 +67,7 @@
 <p>
     <label for="{$baseID}SearchTerm"{$leftSide}>{gt text='Search for'}:</label>
     <input type="text" id="{$baseID}SearchTerm" name="searchterm"{$rightSide} />
-    <input type="button" id="simpledownloadSearchGo" name="gosearch" value="{gt text='Filter'}" />
+    <input type="button" id="verySimpleDownloadSearchGo" name="gosearch" value="{gt text='Filter'}" />
     <br{$break} />
 </p>
 <br />
@@ -76,7 +76,7 @@
 <script type="text/javascript">
 /* <![CDATA[ */
     document.observe('dom:loaded', function() {
-        simpledownload.itemSelector.onLoad('{{$baseID}}', {{$selectedId|default:0}});
+        verysimpledownload.itemSelector.onLoad('{{$baseID}}', {{$selectedId|default:0}});
     });
 /* ]]> */
 </script>

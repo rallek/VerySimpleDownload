@@ -6,7 +6,7 @@
     {adminfooter}
 {elseif isset($smarty.get.func) && $smarty.get.func eq 'edit'}
     {pageaddvar name='stylesheet' value='style/core.css'}
-    {pageaddvar name='stylesheet' value='modules/Simpledownload/style/style.css'}
+    {pageaddvar name='stylesheet' value='modules/VerySimpleDownload/style/style.css'}
     {pageaddvar name='stylesheet' value='system/Theme/style/form/style.css'}
     {pageaddvar name='stylesheet' value='themes/Andreas08/style/fluid960gs/reset.css'}
     {capture assign='pageStyles'}

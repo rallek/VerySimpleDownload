@@ -1,8 +1,8 @@
 SCRIBITE INTEGRATION
 --------------------
 
-It is easy to include Simpledownload in your Scribite editors.
-While Simpledownload contains already the a popup for selecting downloads and other items,
+It is easy to include VerySimpleDownload in your Scribite editors.
+While VerySimpleDownload contains already the a popup for selecting downloads and other items,
 the actual Scribite enhancements must be done manually for Scribite <= 4.3.
 From Scribite 5.0 onwards the integration is automatic. The necessary javascript is loaded via event system and the
 plugins are already in the Scribite package.
@@ -14,11 +14,11 @@ Just follow these few steps to complete the integration for Scribite <= 4.3:
             PageUtil::AddVar('javascript', 'modules/SimpleMedia/javascript/findItem.js');
         }
   3. Below this add
-        if (ModUtil::available('Simpledownload')) {
-            PageUtil::AddVar('javascript', 'modules/Simpledownload/javascript/Simpledownload_finder.js');
+        if (ModUtil::available('VerySimpleDownload')) {
+            PageUtil::AddVar('javascript', 'modules/VerySimpleDownload/javascript/VerySimpleDownload_finder.js');
         }
-  4. Copy or move all files from modules/Simpledownload/docs/scribite/includes/ into modules/Scribite/includes/.
+  4. Copy or move all files from modules/VerySimpleDownload/docs/scribite/includes/ into modules/Scribite/includes/.
 
 Just follow these few steps to complete the integration for Scribite >= 5.0:
- 1. Check if the plugins for Simpledownload are in Scribite/plugins/EDITOR/vendor/plugins. If not then copy from
-    modules/Simpledownload/docs/scribite/includes into modules/Scribite/plugins.
+ 1. Check if the plugins for VerySimpleDownload are in Scribite/plugins/EDITOR/vendor/plugins. If not then copy from
+    modules/VerySimpleDownload/docs/scribite/includes into modules/Scribite/plugins.

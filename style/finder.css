@@ -4,48 +4,48 @@ body {
     text-align: left;
 }
 
-.simpledownload-finderform fieldset,
-.simpledownload-finderform fieldset legend {
+.verysimpledownload-finderform fieldset,
+.verysimpledownload-finderform fieldset legend {
     background-color: #fff;
     border: none;
 }
 
-#simpledownloadItemContainer {
+#verysimpledownloadItemContainer {
     background-color: #eee;
     height: 300px;
     overflow: auto;
     padding: 5px;
 }
 
-#simpledownloadItemContainer ul {
+#verysimpledownloadItemContainer ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#simpledownloadItemContainer a {
+#verysimpledownloadItemContainer a {
     color: #000;
     margin: 0.1em 0.2em;
     text-decoration: underline;
 }
-#simpledownloadItemContainer a:hover,
-#simpledownloadItemContainer a:focus,
-#simpledownloadItemContainer a:active {
+#verysimpledownloadItemContainer a:hover,
+#verysimpledownloadItemContainer a:focus,
+#verysimpledownloadItemContainer a:active {
     color: #900;
     text-decoration: none;
 }
 
-#simpledownloadItemContainer a img {
+#verysimpledownloadItemContainer a img {
     border: none;
 }
 
-#simpledownloadItemContainer a img {
+#verysimpledownloadItemContainer a img {
     border: 1px solid #ccc;
     background-color: #f5f5f5;
     padding: 0.5em;
 }
-#simpledownloadItemContainer a:hover img,
-#simpledownloadItemContainer a:focus img,
-#simpledownloadItemContainer a:active img {
+#verysimpledownloadItemContainer a:hover img,
+#verysimpledownloadItemContainer a:focus img,
+#verysimpledownloadItemContainer a:active img {
     background-color: #fff;
 }

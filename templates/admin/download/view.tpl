@@ -1,6 +1,6 @@
 {* purpose of this template: downloads view view in admin area *}
 {include file='admin/header.tpl'}
-<div class="simpledownload-download simpledownload-view">
+<div class="verysimpledownload-download verysimpledownload-view">
     {gt text='Download list' assign='templateTitle'}
     {pagesetvar name='title' value=$templateTitle}
     <div class="z-admin-content-pagetitle">
@@ -8,10 +8,12 @@
         <h3>{$templateTitle}</h3>
     </div>
 
+    <p class="z-informationmsg">your download files</p>
+
     {if $canBeCreated}
-        {checkpermissionblock component='Simpledownload:Download:' instance='::' level='ACCESS_EDIT'}
+        {checkpermissionblock component='VerySimpleDownload:Download:' instance='::' level='ACCESS_COMMENT'}
             {gt text='Create download' assign='createTitle'}
-            <a href="{modurl modname='Simpledownload' type='admin' func='edit' ot='download'}" title="{$createTitle}" class="z-icon-es-add">{$createTitle}</a>
+            <a href="{modurl modname='VerySimpleDownload' type='admin' func='edit' ot='download'}" title="{$createTitle}" class="z-icon-es-add">{$createTitle}</a>
         {/checkpermissionblock}
     {/if}
     {assign var='own' value=0}
@@ -21,27 +23,28 @@
     {assign var='all' value=0}
     {if isset($showAllEntries) && $showAllEntries eq 1}
         {gt text='Back to paginated view' assign='linkTitle'}
-        <a href="{modurl modname='Simpledownload' type='admin' func='view' ot='download'}" title="{$linkTitle}" class="z-icon-es-view">
+        <a href="{modurl modname='VerySimpleDownload' type='admin' func='view' ot='download'}" title="{$linkTitle}" class="z-icon-es-view">
             {$linkTitle}
         </a>
         {assign var='all' value=1}
     {else}
         {gt text='Show all entries' assign='linkTitle'}
-        <a href="{modurl modname='Simpledownload' type='admin' func='view' ot='download' all=1}" title="{$linkTitle}" class="z-icon-es-view">{$linkTitle}</a>
+        <a href="{modurl modname='VerySimpleDownload' type='admin' func='view' ot='download' all=1}" title="{$linkTitle}" class="z-icon-es-view">{$linkTitle}</a>
     {/if}
 
-    {include file='admin/download/view_quickNav.tpl' all=$all own=$own workflowStateFilter=false}{* see template file for available options *}
+    {include file='admin/download/view_quickNav.tpl' all=$all own=$own}{* see template file for available options *}
 
-    <form action="{modurl modname='Simpledownload' type='admin' func='handleSelectedEntries'}" method="post" id="downloadsViewForm" class="z-form">
+    <form action="{modurl modname='VerySimpleDownload' type='admin' func='handleSelectedEntries'}" method="post" id="downloadsViewForm" class="z-form">
         <div>
             <input type="hidden" name="csrftoken" value="{insert name='csrftoken'}" />
             <input type="hidden" name="ot" value="download" />
             <table class="z-datatable">
                 <colgroup>
                     <col id="cSelect" />
-                    <col id="cDoctitel" />
-                    <col id="cDocdescription" />
-                    <col id="cUploaddocument" />
+                    <col id="cWorkflowState" />
+                    <col id="cDownloadTitle" />
+                    <col id="cDownloadDescription" />
+                    <col id="cFileUpload" />
                     <col id="cItemActions" />
                 </colgroup>
                 <thead>
@@ -50,14 +53,17 @@
                     <th id="hSelect" scope="col" align="center" valign="middle">
                         <input type="checkbox" id="toggleDownloads" />
                     </th>
-                    <th id="hDoctitel" scope="col" class="z-left">
-                        {sortlink __linktext='Doctitel' currentsort=$sort modname='Simpledownload' type='admin' func='view' ot='download' sort='doctitel' sortdir=$sdir all=$all own=$own catidMain=$catIdListMainString workflowState=$workflowState searchterm=$searchterm pageSize=$pageSize}
+                    <th id="hWorkflowState" scope="col" class="z-left">
+                        {sortlink __linktext='State' currentsort=$sort modname='VerySimpleDownload' type='admin' func='view' ot='download' sort='workflowState' sortdir=$sdir all=$all own=$own catidMain=$catIdListMainString workflowState=$workflowState searchterm=$searchterm pageSize=$pageSize}
                     </th>
-                    <th id="hDocdescription" scope="col" class="z-left">
-                        {sortlink __linktext='Docdescription' currentsort=$sort modname='Simpledownload' type='admin' func='view' ot='download' sort='docdescription' sortdir=$sdir all=$all own=$own catidMain=$catIdListMainString workflowState=$workflowState searchterm=$searchterm pageSize=$pageSize}
+                    <th id="hDownloadTitle" scope="col" class="z-left">
+                        {sortlink __linktext='Download title' currentsort=$sort modname='VerySimpleDownload' type='admin' func='view' ot='download' sort='downloadTitle' sortdir=$sdir all=$all own=$own catidMain=$catIdListMainString workflowState=$workflowState searchterm=$searchterm pageSize=$pageSize}
                     </th>
-                    <th id="hUploaddocument" scope="col" class="z-left">
-                        {sortlink __linktext='Uploaddocument' currentsort=$sort modname='Simpledownload' type='admin' func='view' ot='download' sort='uploaddocument' sortdir=$sdir all=$all own=$own catidMain=$catIdListMainString workflowState=$workflowState searchterm=$searchterm pageSize=$pageSize}
+                    <th id="hDownloadDescription" scope="col" class="z-left">
+                        {sortlink __linktext='Download description' currentsort=$sort modname='VerySimpleDownload' type='admin' func='view' ot='download' sort='downloadDescription' sortdir=$sdir all=$all own=$own catidMain=$catIdListMainString workflowState=$workflowState searchterm=$searchterm pageSize=$pageSize}
+                    </th>
+                    <th id="hFileUpload" scope="col" class="z-left">
+                        {sortlink __linktext='File upload' currentsort=$sort modname='VerySimpleDownload' type='admin' func='view' ot='download' sort='fileUpload' sortdir=$sdir all=$all own=$own catidMain=$catIdListMainString workflowState=$workflowState searchterm=$searchterm pageSize=$pageSize}
                     </th>
                     <th id="hItemActions" scope="col" class="z-right z-order-unsorted">{gt text='Actions'}</th>
                 </tr>
@@ -69,31 +75,34 @@
                     <td headers="hselect" align="center" valign="top">
                         <input type="checkbox" name="items[]" value="{$download.id}" class="downloads-checkbox" />
                     </td>
-                    <td headers="hDoctitel" class="z-left">
-                        <a href="{modurl modname='Simpledownload' type='admin' func='display' ot='download' id=$download.id}" title="{gt text='View detail page'}">{$download.doctitel|notifyfilters:'simpledownload.filterhook.downloads'}</a>
+                    <td headers="hWorkflowState" class="z-left z-nowrap">
+                        {$download.workflowState|verysimpledownloadObjectState}
                     </td>
-                    <td headers="hDocdescription" class="z-left">
-                        {$download.docdescription}
+                    <td headers="hDownloadTitle" class="z-left">
+                        <a href="{modurl modname='VerySimpleDownload' type='admin' func='display' ot='download' id=$download.id}" title="{gt text='View detail page'}">{$download.downloadTitle|notifyfilters:'verysimpledownload.filterhook.downloads'}</a>
                     </td>
-                    <td headers="hUploaddocument" class="z-left">
-                          <a href="{$download.uploaddocumentFullPathURL}" title="{$download->getTitleFromDisplayPattern()|replace:"\"":""}"{if $download.uploaddocumentMeta.isImage} rel="imageviewer[download]"{/if}>
-                          {if $download.uploaddocumentMeta.isImage}
-                              {thumb image=$download.uploaddocumentFullPath objectid="download-`$download.id`" preset=$downloadThumbPresetUploaddocument tag=true img_alt=$download->getTitleFromDisplayPattern()}
+                    <td headers="hDownloadDescription" class="z-left">
+                        {$download.downloadDescription}
+                    </td>
+                    <td headers="hFileUpload" class="z-left">
+                          <a href="{$download.fileUploadFullPathURL}" title="{$download->getTitleFromDisplayPattern()|replace:"\"":""}"{if $download.fileUploadMeta.isImage} rel="imageviewer[download]"{/if}>
+                          {if $download.fileUploadMeta.isImage}
+                              {thumb image=$download.fileUploadFullPath objectid="download-`$download.id`" preset=$downloadThumbPresetFileUpload tag=true img_alt=$download->getTitleFromDisplayPattern()}
                           {else}
-                              {gt text='Download'} ({$download.uploaddocumentMeta.size|simpledownloadGetFileSize:$download.uploaddocumentFullPath:false:false})
+                              {$download.fileUpload} ({$download.fileUploadMeta.size|verysimpledownloadGetFileSize:$download.fileUploadFullPath:false:false})
                           {/if}
                           </a>
                     </td>
                     <td id="itemActions{$download.id}" headers="hItemActions" class="z-right z-nowrap z-w02">
                         {if count($download._actions) gt 0}
                             {foreach item='option' from=$download._actions}
-                                <a href="{$option.url.type|simpledownloadActionUrl:$option.url.func:$option.url.arguments}" title="{$option.linkTitle|safetext}"{if $option.icon eq 'preview'} target="_blank"{/if}>{icon type=$option.icon size='extrasmall' alt=$option.linkText|safetext}</a>
+                                <a href="{$option.url.type|verysimpledownloadActionUrl:$option.url.func:$option.url.arguments}" title="{$option.linkTitle|safetext}"{if $option.icon eq 'preview'} target="_blank"{/if}>{icon type=$option.icon size='extrasmall' alt=$option.linkText|safetext}</a>
                             {/foreach}
                             {icon id="itemActions`$download.id`Trigger" type='options' size='extrasmall' __alt='Actions' class='z-pointer z-hide'}
                             <script type="text/javascript">
                             /* <![CDATA[ */
                                 document.observe('dom:loaded', function() {
-                                    simdownInitItemActions('download', 'view', 'itemActions{{$download.id}}');
+                                    vesidoInitItemActions('download', 'view', 'itemActions{{$download.id}}');
                                 });
                             /* ]]> */
                             </script>
@@ -102,7 +111,7 @@
                 </tr>
             {foreachelse}
                 <tr class="z-admintableempty">
-                  <td class="z-left" colspan="5">
+                  <td class="z-left" colspan="6">
                 {gt text='No downloads found.'}
                   </td>
                 </tr>
@@ -112,12 +121,13 @@
             </table>
             
             {if !isset($showAllEntries) || $showAllEntries ne 1}
-                {pager rowcount=$pager.numitems limit=$pager.itemsperpage display='page' modname='Simpledownload' type='admin' func='view' ot='download'}
+                {pager rowcount=$pager.numitems limit=$pager.itemsperpage display='page' modname='VerySimpleDownload' type='admin' func='view' ot='download'}
             {/if}
             <fieldset>
-                <label for="simpledownloadAction">{gt text='With selected downloads'}</label>
-                <select id="simpledownloadAction" name="action">
+                <label for="verySimpleDownloadAction">{gt text='With selected downloads'}</label>
+                <select id="verySimpleDownloadAction" name="action">
                     <option value="">{gt text='Choose action'}</option>
+                <option value="approve" title="{gt text='Update content and approve for immediate publishing.'}">{gt text='Approve'}</option>
                     <option value="delete" title="{gt text='Delete content permanently.'}">{gt text='Delete'}</option>
                 </select>
                 <input type="submit" value="{gt text='Submit'}" />

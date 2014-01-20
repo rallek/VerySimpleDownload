@@ -1,10 +1,10 @@
 {* purpose of this template: downloads view filter form in user area *}
-{checkpermissionblock component='Simpledownload:Download:' instance='::' level='ACCESS_EDIT'}
+{checkpermissionblock component='VerySimpleDownload:Download:' instance='::' level='ACCESS_READ'}
 {assign var='objectType' value='download'}
-<form action="{$modvars.ZConfig.entrypoint|default:'index.php'}" method="get" id="simpledownloadDownloadQuickNavForm" class="simpledownload-quicknav">
+<form action="{$modvars.ZConfig.entrypoint|default:'index.php'}" method="get" id="verySimpleDownloadDownloadQuickNavForm" class="verysimpledownload-quicknav">
     <fieldset>
         <h3>{gt text='Quick navigation'}</h3>
-        <input type="hidden" name="module" value="{modgetinfo modname='Simpledownload' info='url'}" />
+        <input type="hidden" name="module" value="{modgetinfo modname='VerySimpleDownload' info='url'}" />
         <input type="hidden" name="type" value="user" />
         <input type="hidden" name="func" value="view" />
         <input type="hidden" name="ot" value="download" />
@@ -12,12 +12,12 @@
         <input type="hidden" name="own" value="{$own|default:0}" />
         {gt text='All' assign='lblDefault'}
         {if !isset($categoryFilter) || $categoryFilter eq true}
-            {modapifunc modname='Simpledownload' type='category' func='getAllProperties' ot=$objectType assign='properties'}
+            {modapifunc modname='VerySimpleDownload' type='category' func='getAllProperties' ot=$objectType assign='properties'}
             {if $properties ne null && is_array($properties)}
                 {gt text='All' assign='lblDefault'}
                 {nocache}
                 {foreach key='propertyName' item='propertyId' from=$properties}
-                    {modapifunc modname='Simpledownload' type='category' func='hasMultipleSelection' ot=$objectType registry=$propertyName assign='hasMultiSelection'}
+                    {modapifunc modname='VerySimpleDownload' type='category' func='hasMultipleSelection' ot=$objectType registry=$propertyName assign='hasMultiSelection'}
                     {gt text='Category' assign='categoryLabel'}
                     {assign var='categorySelectorId' value='catid'}
                     {assign var='categorySelectorName' value='catid'}
@@ -26,11 +26,11 @@
                         {gt text='Categories' assign='categoryLabel'}
                         {assign var='categorySelectorName' value='catids'}
                         {assign var='categorySelectorId' value='catids__'}
-                        {assign var='categorySelectorSize' value='5'}
+                        {assign var='categorySelectorSize' value='1'} {* war 5 *}
                     {/if}
                         <label for="{$categorySelectorId}{$propertyName}">{$categoryLabel}</label>
                         &nbsp;
-                        {selector_category name="`$categorySelectorName``$propertyName`" field='id' selectedValue=$catIdList.$propertyName categoryRegistryModule='Simpledownload' categoryRegistryTable=$objectType categoryRegistryProperty=$propertyName defaultText=$lblDefault editLink=false multipleSize=$categorySelectorSize}
+                        {selector_category name="`$categorySelectorName``$propertyName`" field='id' selectedValue=$catIdList.$propertyName categoryRegistryModule='VerySimpleDownload' categoryRegistryTable=$objectType categoryRegistryProperty=$propertyName defaultText=$lblDefault editLink=false multipleSize=$categorySelectorSize}
                 {/foreach}
                 {/nocache}
             {/if}
@@ -54,9 +54,9 @@
                 <select id="sortBy" name="sort">
                     <option value="id"{if $sort eq 'id'} selected="selected"{/if}>{gt text='Id'}</option>
                     <option value="workflowState"{if $sort eq 'workflowState'} selected="selected"{/if}>{gt text='Workflow state'}</option>
-                    <option value="doctitel"{if $sort eq 'doctitel'} selected="selected"{/if}>{gt text='Doctitel'}</option>
-                    <option value="docdescription"{if $sort eq 'docdescription'} selected="selected"{/if}>{gt text='Docdescription'}</option>
-                    <option value="uploaddocument"{if $sort eq 'uploaddocument'} selected="selected"{/if}>{gt text='Uploaddocument'}</option>
+                    <option value="downloadTitle"{if $sort eq 'downloadTitle'} selected="selected"{/if}>{gt text='Download title'}</option>
+                    <option value="downloadDescription"{if $sort eq 'downloadDescription'} selected="selected"{/if}>{gt text='Download description'}</option>
+                    <option value="fileUpload"{if $sort eq 'fileUpload'} selected="selected"{/if}>{gt text='File upload'}</option>
                     <option value="createdDate"{if $sort eq 'createdDate'} selected="selected"{/if}>{gt text='Creation date'}</option>
                     <option value="createdUserId"{if $sort eq 'createdUserId'} selected="selected"{/if}>{gt text='Creator'}</option>
                     <option value="updatedDate"{if $sort eq 'updatedDate'} selected="selected"{/if}>{gt text='Update date'}</option>
@@ -88,7 +88,7 @@
 <script type="text/javascript">
 /* <![CDATA[ */
     document.observe('dom:loaded', function() {
-        simdownInitQuickNavigation('download', 'user');
+        vesidoInitQuickNavigation('download', 'user');
         {{if isset($searchFilter) && $searchFilter eq false}}
             {{* we can hide the submit button if we have no quick search field *}}
             $('quicknavSubmit').addClassName('z-hide');

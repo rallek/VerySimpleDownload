@@ -5,7 +5,7 @@
 {pageaddvar name='javascript' value='livepipe'}
 {pageaddvar name='javascript' value='zikula.ui'}
 {pageaddvar name='javascript' value='zikula.imageviewer'}
-{pageaddvar name='javascript' value='modules/Simpledownload/javascript/Simpledownload.js'}
+{pageaddvar name='javascript' value='modules/VerySimpleDownload/javascript/VerySimpleDownload.js'}
 
 {if !isset($smarty.get.theme) || $smarty.get.theme ne 'Printer'}
     {adminheader}

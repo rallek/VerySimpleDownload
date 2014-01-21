@@ -49,8 +49,8 @@
     {foreach item='download' from=$items}
         <tr class="{cycle values='z-odd, z-even'}">
             <td headers="hDownloadTitle" class="z-left">
-                <a href="{modurl modname='VerySimpleDownload' type='user' func='display' ot='download' id=$download.id}" title="{gt text='View detail page'}">{$download.downloadTitle|notifyfilters:'verysimpledownload.filterhook.downloads'}</a></br>
-				{$download.downloadDescription|truncate:50}</br>
+                <a class="z-bold" href="{modurl modname='VerySimpleDownload' type='user' func='display' ot='download' id=$download.id}" title="{gt text='View detail page'}">{$download.downloadTitle|notifyfilters:'verysimpledownload.filterhook.downloads'}</a></br>
+				<span class="z-sub">{$download.downloadDescription|truncate:50}</span></br>
 
             
                   <a href="{$download.fileUploadFullPathURL}" title="{$download->getTitleFromDisplayPattern()|replace:"\"":""}"{if $download.fileUploadMeta.isImage} rel="imageviewer[download]"{/if}>

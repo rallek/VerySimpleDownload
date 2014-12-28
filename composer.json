@@ -1,0 +1,15 @@
+{
+    "name": "rallek/verysimpledownload-module",
+    "description": "My very first Module",
+    "type": "zikula-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "rallek",
+            "role": "owner"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    }
+}

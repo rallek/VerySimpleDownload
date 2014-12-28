@@ -1,0 +1,22 @@
+{
+    "extension": {
+        "title": "Very simple download module",
+        "icon": "https://github.com/rallek/VerySimpleDownload/blob/master/images/admin.png"
+    },
+    "version": {
+        "keywords": [
+            "module",
+            "most",
+            "modulestudio"
+        ],
+        "semver": "1.0.0",
+        "dependencies": {
+            "zikula/core": ">=1.3.5 <1.4"
+        },
+        "composerpath": "composer.json",
+        "description": "My very first Module",
+        "urls": {
+            "issues": "https://github.com/rallek/VerySimpleDownload/issues"
+        }
+    }
+}

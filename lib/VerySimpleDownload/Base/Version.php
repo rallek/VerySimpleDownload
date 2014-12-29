@@ -25,7 +25,7 @@ class VerySimpleDownload_Base_Version extends Zikula_AbstractVersion
     {
         $meta = array();
         // the current module version
-        $meta['version']              = '1.0.0';
+        $meta['version']              = '1.0.4';
         // the displayed name of the module
         $meta['displayname']          = $this->__('Very simple download');
         // the module description
@@ -34,7 +34,7 @@ class VerySimpleDownload_Base_Version extends Zikula_AbstractVersion
         $meta['url']                  = $this->__('verysimpledownload');
         // core requirement
         $meta['core_min']             = '1.3.5'; // requires minimum 1.3.5
-        $meta['core_max']             = '1.3.6'; // not ready for 1.3.7 yet
+        $meta['core_max']             = '1.4.99'; // not ready for 1.3.7 yet
 
         // define special capabilities of this module
         $meta['capabilities'] = array(

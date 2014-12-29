@@ -9,9 +9,9 @@
             "most",
             "modulestudio"
         ],
-        "semver": "1.0.3",
+        "semver": "1.0.4",
         "dependencies": {
-            "zikula/core": ">=1.3.5 <1.4"
+            "zikula/core": ">=1.3.5 <2.0"
         },
         "composerpath": "composer.json",
         "description": "Last test long time ago! Please try carefully! This module provides a very simple way to offer downloads. If you need a more fancy module, grab the mostapp file put into modulestudio and adjust it to your own needs.",

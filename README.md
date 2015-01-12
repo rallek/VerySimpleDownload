@@ -17,5 +17,7 @@ This module is intended for being used with Zikula 1.3.5 and 1.3.6.
 
 For questions and other remarks visit our homepage http://support.zikula.de.
 
+And if I figure out how it works you will find doku on http://rallek.github.io/VerySimpleDownload/
+
 Ralf Koester (ralf@zikula.de)
 http://support.zikula.de
